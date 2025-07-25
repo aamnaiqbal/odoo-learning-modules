@@ -122,7 +122,7 @@ appointment_view.xml
 
 doctor_view.xml
 
-menu.xml
+menu.xml  --> defines the navigation structure in the UI 
 
 ---
 
@@ -146,3 +146,5 @@ Custom JSON responses
 
 ---
 
+## upgrade
+You need to upgrade the app after adding new features at the code level, to see the the newly added features in the module.
