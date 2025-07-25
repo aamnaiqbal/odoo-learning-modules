@@ -1,0 +1,15 @@
+# Database password file (contains actual password)
+odoo_pg_pass
+*.pass
+*.password
+
+# ================================
+# PYTHON CACHE & COMPILED FILES
+# ================================
+
+# Python cache directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
