@@ -148,3 +148,4 @@ Custom JSON responses
 
 ## upgrade
 You need to upgrade the app after adding new features at the code level, to see the the newly added features in the module.
+

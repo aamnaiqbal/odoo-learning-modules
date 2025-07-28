@@ -11,26 +11,32 @@
               parent="hospital_management_root"
               action="action_hospital_patient"
               sequence="1"/>
+
+    <menuitem id="hospital_patients_readonly_menu" 
+              name="View Patients" 
+              parent="hospital_management_root"
+              action="action_hospital_patient_readonly"
+              sequence="2"/>
               
     <!-- Other menus (placeholders for future development) -->
     <menuitem id="hospital_doctors_menu" 
               name="Doctors" 
               parent="hospital_management_root"
-              sequence="2"
+              sequence="3"
               />
               
     <menuitem id="hospital_appointments_menu" 
               name="Book Appointment" 
               parent="hospital_management_root"
-              sequence="3"/>
+              sequence="4"/>
               
     <menuitem id="hospital_appointments_history_menu" 
               name="Appointment History" 
               parent="hospital_management_root"
-              sequence="4"/>
+              sequence="5"/>
               
     <menuitem id="hospital_notifications_menu" 
               name="Notifications" 
               parent="hospital_management_root"
-              sequence="5"/>
+              sequence="6"/>
 </odoo>
