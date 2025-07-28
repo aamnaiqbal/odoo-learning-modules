@@ -9,11 +9,21 @@
             <form string="Hospital Patient">
                 <sheet>
                     <group>
+                    <group>
                         <field name="name"/>
-                        <field name="age"/>
+                        
                         <field name="gender"/>
                     </group>
+                    <group>
+                        <field name="age"/>
+                       
+                    </group>
+                    </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>
@@ -26,8 +36,8 @@
         <field name="arch" type="xml">
             <list string="Hospital Patients">
                 <field name="name"/>
-                <field name="age"/>
-                <field name="gender"/>
+                <field name="age" optional="show"/>
+                <field name="gender" optional="hide"/>
             </list>
         </field>
     </record>

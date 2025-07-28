@@ -5,7 +5,7 @@
     'summary': 'Hospital Management System',
     'description': 'A basic hospital management module',
     'author': 'Aamna Iqbal',
-    'depends': ['base'], #required field.    The depends field lists the Odoo modules that your module depends on. These must be installed for your module to work correctly.
+    'depends': ['base', 'mail'], #required field.    The depends field lists the Odoo modules that your module depends on. These must be installed for your module to work correctly.
     'license': 'LGPL-3',
     'data': [
         'security/ir.model.access.csv',
