@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="doctor_1" model="hospital.doctor">
+        <field name="name">Dr. John Smith</field>
+        <field name="department_id" ref="hospital_website.dept_neuro"/>
+    </record>
+    <record id="doctor_2" model="hospital.doctor">
+        <field name="name">Dr. Sarah Johnson</field>
+        <field name="department_id" ref="hospital_website.dept_neuro"/>
+    </record>
+    <record id="doctor_3" model="hospital.doctor">
+        <field name="name">Dr. Michael Brown</field>
+        <field name="department_id" ref="hospital_website.dept_cardio"/>
+    </record>
+    <record id="doctor_4" model="hospital.doctor">
+        <field name="name">Dr. Emily Davis</field>
+        <field name="department_id" ref="hospital_website.dept_pedia"/>
+    </record>
+</odoo>

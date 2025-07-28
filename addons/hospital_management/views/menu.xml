@@ -22,6 +22,7 @@
     <menuitem id="hospital_doctors_menu" 
               name="Doctors" 
               parent="hospital_management_root"
+              action="action_hospital_doctor"
               sequence="3"
               />
               

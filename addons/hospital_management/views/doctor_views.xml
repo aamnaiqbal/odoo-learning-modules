@@ -1,4 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+
 <odoo>
-    <!-- Doctor views will be implemented in future development -->
+    <record id="view_form_hospital_doctor" model="ir.ui.view">
+        <field name="name">hospital.doctor.form</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <form string="Doctor">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="gender"/>
+                            <field name="specialty"/>
+                        
+                        </group>
+                        <group>
+                            <field name="contact_number"/>
+                        
+                        </group>
+                        
+                    </group>
+
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Doctor List View -->
+    <record id="view_tree_hospital_doctor" model="ir.ui.view">
+        <field name="name">hospital.doctor.tree</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <list string="Doctors">
+                <field name="name"/>
+                <field name="specialty"/>
+                <field name="gender"/>
+                <field name="contact_number"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Doctor Action -->
+    <record id="action_hospital_doctor" model="ir.actions.act_window">
+    <field name="name">Doctors</field>
+    <field name="res_model">hospital.doctor</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create the first doctor record
+        </p>
+    </field>
+</record>
+
 </odoo>

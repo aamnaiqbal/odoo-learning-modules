@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- MAIN MENU -->
+    <record id="hospital_main_menu" model="website.menu">
+        <field name="name">Main Navigation</field>
+        <field name="sequence">10</field>
+        <field name="website_id" eval="False"/>
+    </record>
+
+    <!-- CHILD MENUS -->
+    <record id="hospital_menu_home" model="website.menu">
+        <field name="name">Home</field>
+        <field name="url">/</field>
+        <field name="parent_id" ref="hospital_main_menu"/>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="hospital_menu_departments" model="website.menu">
+        <field name="name">Departments</field>
+        <field name="url">/departments</field>
+        <field name="parent_id" ref="hospital_main_menu"/>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="hospital_menu_doctors" model="website.menu">
+        <field name="name">Our Doctors</field>
+        <field name="url">/doctors</field>
+        <field name="parent_id" ref="hospital_main_menu"/>
+        <field name="sequence">30</field>
+    </record>
+</odoo>

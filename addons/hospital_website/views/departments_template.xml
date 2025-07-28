@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="departments_template" name="Departments">
+    <t t-call="website.layout">
+      <section class="container my-5">
+        <h2>Departments</h2>
+        <div class="row">
+          <t t-foreach="departments" t-as="dept">
+            <div class="col-md-4 mb-3">
+              <a t-att-href="'/doctors/%s' % dept.id" class="btn btn-primary w-100">
+                <t t-esc="dept.name"/>
+              </a>
+            </div>
+          </t>
+        </div>
+      </section>
+    </t>
+  </template>
+</odoo>

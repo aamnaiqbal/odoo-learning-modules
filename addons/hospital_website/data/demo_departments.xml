@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="dept_neuro" model="hospital.department">
+    <field name="name">Neurology</field>
+  </record>
+  <record id="dept_cardio" model="hospital.department">
+    <field name="name">Cardiology</field>
+  </record>
+  <record id="dept_pedia" model="hospital.department">
+    <field name="name">Pediatrics</field>
+  </record>
+</odoo>
