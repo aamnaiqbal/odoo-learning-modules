@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="patient_appointment_form" name="Patient Appointment Form">
+    <t t-call="website.layout">
+      <div class="container mt-5">
+        <h2>Book an Appointment</h2>
+        <form action="/hospital/appointment/submit" method="post">
+        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          <div class="form-group">
+            <label for="name">Patient Name</label>
+            <input type="text" name="name" required="required" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="date">Appointment Date</label>
+            <input type="date" name="date" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="doctor_id">Preferred Doctor</label>
+            <select name="doctor_id" class="form-control">
+              <t t-foreach="doctors" t-as="doctor">
+                <option t-att-value="doctor.id">
+                  <t t-esc="doctor.name"/>
+                </option>
+              </t>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </form>
+      </div>
+    </t>
+  </template>
+
+  <template id="appointment_thankyou" name="Appointment Thank You">
+    <t t-call="website.layout">
+      <div class="container mt-5">
+        <h3>Thank you! Your appointment has been booked.</h3>
+      </div>
+    </t>
+  </template>
+</odoo>

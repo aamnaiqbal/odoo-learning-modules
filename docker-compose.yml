@@ -1,4 +1,3 @@
-version: '3.1'
 services:
   web:
     image: odoo:latest
@@ -8,31 +7,24 @@ services:
     ports:
       - "8069:8069"
       - "8072:8072"
-
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
     environment:
-      - PASSWORD_FILE=/run/secrets/postgresql_password
-    secrets:
-      - postgresql_password
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=root  # match this with the db password
   db:
     image: postgres:latest
     environment:
       - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD_FILE=/run/secrets/postgresql_password
       - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=root  # must match above
       - PGDATA=/var/lib/postgresql/data/pgdata
     restart: always
     volumes:
       - odoo-db-data:/var/lib/postgresql/data/pgdata
-    secrets:
-      - postgresql_password
 volumes:
   odoo-web-data:
   odoo-db-data:
-# Create a file named odoo_pg_pass in the same directory and enter your database password for odoo
-secrets:
-  postgresql_password:
-    file: odoo_pg_pass
