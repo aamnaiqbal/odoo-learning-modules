@@ -4,6 +4,11 @@
     'category': 'Website',
     'license': 'LGPL-3',
     'depends': ['website'],
+    'assets': {
+    'web.assets_frontend': [
+        'hospital_website/static/src/css/output.css',
+    ],
+},
     'data': [
         'security/ir.model.access.csv',
         'views/website_menu.xml',
