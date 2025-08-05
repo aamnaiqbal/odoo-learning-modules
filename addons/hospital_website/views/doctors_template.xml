@@ -10,7 +10,7 @@
                             <div class="card p-3 shadow"
                                 t-attf-onclick="showModal('{{ doc.name }}', '{{ doc.department_id.name }}')">
                                 <h5><t t-esc="doc.name"/></h5>
-                                <h2>Doctors <t t-if="department">in <t t-esc="department.name"/></t></h2>
+                                <p><t t-esc="doc.department_id.name"/></p>
                             </div>
                         </div>
                     </t>

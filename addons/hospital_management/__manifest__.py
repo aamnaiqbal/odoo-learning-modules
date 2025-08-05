@@ -10,8 +10,9 @@
     'data': [
         'security/ir.model.access.csv',
         'views/patient_views.xml',
+        'views/account_move_views.xml',
         'views/patient_readonly_views.xml',
-        'views/doctor_views.xml',
+        'views/appointment_views.xml',
         'views/menu.xml'
     ],   #required field.  The data field is a list of XML/CSV files that should be loaded when the module is installed.
     'installable': True,

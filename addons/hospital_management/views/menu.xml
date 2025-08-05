@@ -19,16 +19,10 @@
               sequence="2"/>
               
     <!-- Other menus (placeholders for future development) -->
-    <menuitem id="hospital_doctors_menu" 
-              name="Doctors" 
-              parent="hospital_management_root"
-              action="action_hospital_doctor"
-              sequence="3"
-              />
-              
     <menuitem id="hospital_appointments_menu" 
               name="Book Appointment" 
               parent="hospital_management_root"
+              action="action_hospital_appointment"
               sequence="4"/>
               
     <menuitem id="hospital_appointments_history_menu" 

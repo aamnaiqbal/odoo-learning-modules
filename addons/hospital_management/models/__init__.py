@@ -1,3 +1,3 @@
 from . import patient
-from . import doctor
-from . import doctorSchedule
+from . import appointment
+from . import account_move
